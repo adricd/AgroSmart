@@ -242,42 +242,45 @@ footer {
 
     .navbar{
         width: 95%;
+        min-height: auto;
+        padding: 15px 0;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .logo img{
+        width: 150px;
     }
 
     .menu{
-        gap: 25px;
+        gap: 20px;
+        flex-wrap: wrap;
+        justify-content: center;
     }
 
     .menu a{
         font-size: 16px;
     }
 
-    .logo img{
-        width: 150px;
-    }
-    .navbar {
-        width: 95%;
-        height: auto;
-        padding: 15px 0;
-        flex-direction: column;
-        gap: 15px;
+    .activo{
+        padding: 8px 16px;
     }
 
-    .menu {
-        gap: 20px;
-        flex-wrap: wrap;
-        justify-content: center;
+    .user-btn{
+        width: 45px;
+        height: 45px;
     }
 
-    .menu a {
-        font-size: 16px;
+    .user-btn img{
+        width: 40px;
+        height: 40px;
     }
 
-    .logo img {
-        width: 150px;
+    .asistencia-page{
+        width: 92%;
+        padding: 35px 0 70px;
     }
 
-    /* Asistencia */
     .asistencia-page h1{
         font-size: 40px;
     }
@@ -290,7 +293,14 @@ footer {
         padding: 20px;
     }
 
-    /* Footer */
+    .chat-input{
+        flex-direction: column;
+    }
+
+    .chat-input button{
+        width: 100%;
+    }
+
     footer{
         flex-wrap: wrap;
         gap: 30px;

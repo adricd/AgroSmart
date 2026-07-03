@@ -8,6 +8,12 @@
 html {
     scroll-behavior: smooth;
 }
+
+body {
+    background: #ffffff;
+    color: #222;
+}
+
 /* =========================
    BOTÓN USUARIO
 ========================= */
@@ -433,228 +439,112 @@ footer {
    1200px
 ==================================== */
 
-@media (max-width:1200px){
-
-    .hero-content{
-        width:95%;
-        gap:60px;
-    }
-
-    .hero-text{
-        width:450px;
-    }
-
-    .hero-text h1{
-        font-size:52px;
-    }
-
-    .register-card-container{
-        width:420px;
-    }
-}
-
-/* ====================================
-   1024px
-==================================== */
-
-@media (max-width:1024px){
-
-    .hero{
-        height:900px;
-    }
-
-    .hero-content{
-        gap:40px;
-    }
-
-    .hero-text{
-        width:400px;
-        margin-top:100px;
-    }
-
-    .hero-text h1{
-        font-size:46px;
-    }
-
-    .hero-text p{
-        font-size:20px;
-    }
-
-    .register-card-container{
-        width:380px;
-    }
-
-    .menu{
-        gap:30px;
-    }
-}
-
-/* ====================================
-   900px
-==================================== */
-
-@media (max-width:900px){
-
-    .hero{
-        height:980px;
-    }
-
-    .hero-content{
-
-        top:40px;
-
-        flex-direction:column;
-
-        align-items:center;
-
-        gap:30px;
-    }
-
-    .hero-text{
-        width:100%;
-        max-width:650px;
-
-        margin-top:0;
-
-        text-align:center;
-    }
-
-    .hero-text-content{
-        align-items:center;
-    }
-
-    .register-card-container{
-        width:100%;
-        max-width:500px;
-    }
-
-    .hero-overlay{
-
-        background:
-        linear-gradient(
-            to bottom,
-            rgba(255,255,255,.95),
-            rgba(255,255,255,.75)
-        );
-    }
-}
-
-/* ====================================
-   768px
-==================================== */
-
-@media (max-width:768px){
+@media (max-width: 1100px){
 
     .navbar{
+        width: 95%;
+        min-height: auto;
+        padding: 15px 0;
+        flex-direction: column;
+        gap: 15px;
+    }
 
-        flex-direction:column;
-
-        height:auto;
-
-        padding:20px 0;
-
-        gap:15px;
+    .logo img{
+        width: 150px;
     }
 
     .menu{
-
-        gap:15px;
-
-        flex-wrap:wrap;
-
-        justify-content:center;
-    }
-
-    .hero{
-        height:1050px;
-    }
-
-    .hero-text h1{
-        font-size:40px;
-    }
-
-    .hero-text p{
-        font-size:18px;
-    }
-
-    .register-card{
-        padding:25px;
-    }
-
-    .form-group.row{
-        flex-direction:column;
-    }
-
-    footer{
-
-        flex-direction:column;
-
-        align-items:center;
-
-        text-align:center;
-
-        gap:35px;
-    }
-
-    .footer-col{
-        width:100%;
-        max-width:350px;
-    }
-
-    .footer-logo{
-        margin:0 auto 20px;
-        display:block;
-    }
-
-    .footer-redes{
-        margin:15px auto 0;
-    }
-}
-
-/* ====================================
-   480px
-==================================== */
-
-@media (max-width:480px){
-
-    .logo img{
-        width:150px;
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 18px;
     }
 
     .menu a{
-        font-size:14px;
+        font-size: 15px;
     }
 
-    .btn-contacto{
-        padding:8px 15px;
+    .user-btn{
+        width: 45px;
+        height: 45px;
+    }
+
+    .user-btn img{
+        width: 40px;
+        height: 40px;
     }
 
     .hero{
-        height:1100px;
+        height: auto;
+        min-height: 1000px;
+    }
+
+    .hero-content{
+        position: relative;
+        top: auto;
+        left: auto;
+        transform: none;
+        width: 92%;
+        margin: auto;
+        padding: 60px 0;
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+    }
+
+    .hero-text{
+        width: 100%;
+        max-width: 650px;
+        margin-top: 0;
+        text-align: center;
+    }
+
+    .hero-text-content{
+        align-items: center;
     }
 
     .hero-text h1{
-        font-size:30px;
+        font-size: 45px;
     }
 
     .hero-text p{
-        font-size:16px;
+        font-size: 19px;
+    }
+
+    .register-card-container{
+        width: 100%;
+        max-width: 500px;
     }
 
     .register-card{
-        padding:20px;
-        border-radius:18px;
+        padding: 28px;
     }
 
-    .register-card h2{
-        font-size:22px;
+    .form-group.row{
+        flex-direction: column;
+        gap: 0;
     }
 
-    .subtitle{
-        font-size:13px;
+    .plans-selector{
+        flex-direction: column;
     }
 
     footer{
-        padding:40px 20px;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 30px;
+        padding: 40px 20px;
+    }
+
+    .footer-col{
+        width: 100%;
+        max-width: 400px;
+    }
+
+    .footer-logo,
+    .footer-redes{
+        margin-left: auto;
+        margin-right: auto;
     }
 }
