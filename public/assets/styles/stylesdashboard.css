@@ -36,17 +36,26 @@ header {
 }
 
 .navbar {
-    width: 90%;
+    width: 95%;
     margin: auto;
-    height: 75px;
+    min-height: 75px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 30px;
 }
 
 /* ====================================
    HERO DASHBOARD
 ==================================== */
+h2{
+    color:#45603F;
+    margin-bottom:20px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:2.2rem;
+}
 
 .hero-dashboard{
     width:100%;

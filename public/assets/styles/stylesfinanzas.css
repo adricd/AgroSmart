@@ -34,12 +34,13 @@ header {
 }
 
 .navbar {
-    width: 90%;
+    width: 95%;
     margin: auto;
-    height: 75px;
+    min-height: 75px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 30px;
 }
 
 .logo img {

@@ -33,68 +33,22 @@
 
             <ul class="menu">
 
-                <li><a href="dashboard.html">Inicio</a></li>
-                <li><a href="finanzas.html">Finanzas</a></li>
-                <li><a href="sensores.html">Sensores</a></li>
-                <li><a href="historico.html">Análisis</a></li>
-                <li><a href="reportes.html">Reportes</a></li>
-                <li><a href="inventario.html">Inventario</a></li>
-                <li><a href="registrocultivos.html">Cultivos</a></li>
-                <li><a class="activo" href="planes.html"> Tu Plan</a></li>
-                <li>
-                    <a href="asistencia.html" class="btn-contacto">
-                        Asistencia Técnica
-                    </a>
-                </li>
+                <li><a href="servicios.html">Servicios</a></li>
+                <li><a class="activo" href="planesindex.html">Planes</a></li>
+                <li><a href="quienesSomos.html">Quienes Somos</a></li>
+                <li><a href="#contacto" class="btn-contacto">Contáctanos</a></li>
 
                 <li>
                     <a href="login.html" class="user-btn">
                         <img src="assets/images/user.png" alt="Usuario">
                     </a>
                 </li>
-
             </ul>
 
         </nav>
 
     </header>
 
-
-
-    <!-- tuplan--> 
-     
-
-    <section id="tu-plan" class="plan-actual-section">
-
-        <h2 class="titulo-principal">
-            Tu Plan Actual
-        </h2>
-
-        <div class="plan-actual-card">
-
-            <h3 id="nombrePlan">Plan Pro</h3>
-
-            <p>
-                Actualmente tienes una suscripción activa.
-            </p>
-
-            <ul id="beneficiosPlan">
-
-                <li>✓ Monitoreo avanzado</li>
-                <li>✓ Reportes y análisis</li>
-                <li>✓ Alertas de plagas y clima</li>
-                <li>✓ Soporte prioritario</li>
-
-            </ul>
-
-            <span class="plan-activo">
-                PLAN ACTIVO
-            </span>
-
-        </div>
-    </section>
-
-</section>
 
     <!-- =========================
          PLANES
@@ -105,7 +59,7 @@
         <h3 class="subtitulo-verde">PLANES</h3>
 
         <h1 class="titulo-principal">
-            Cambia de plan según tus necesidades.
+            Elige el plan que se adapta a ti
         </h1>
 
         <div class="planes-grid">
@@ -147,8 +101,7 @@
 
                 </ul>
 
-                <button class="btn-plan-blanco"
-                onclick="cambiarPlan('Basico')">
+                <button class="btn-plan-blanco">
                     Comenzar
                 </button>
 
@@ -193,8 +146,7 @@
 
                 </ul>
 
-                <button class="btn-plan-verde"
-                onclick="cambiarPlan('Pro')">
+                <button class="btn-plan-verde">
                     Comenzar
                 </button>
 
@@ -239,8 +191,7 @@
 
                 </ul>
 
-                <button class="btn-plan-blanco"
-                onclick="cambiarPlan('Premium')">
+                <button class="btn-plan-blanco">
                     Comenzar
                 </button>
 
@@ -249,23 +200,8 @@
         </div>
 
     </section>
-    
-<!-- =========================
-     ESCENARIO ERROR US37
-========================= -->
 
-<section class="plan-error-section">
 
-    <h2>
-        Error temporal
-    </h2>
-
-    <p>
-        No fue posible recuperar la información de tu plan.
-        Inténtalo nuevamente más tarde.
-    </p>
-
-</section>
 
 
     <!-- =========================
@@ -317,146 +253,6 @@
     <div class="copyright">
         ©2026 AgroSmart. Todos los derechos reservados.
     </div>
-
-     
-    <script>
-
-        let planPendiente = "";
-
-        function cambiarPlan(plan){
-
-            planPendiente = plan;
-
-            document.getElementById("textoModal").innerHTML =
-            "¿Está seguro que desea cambiar al Plan " + plan + "?";
-
-            document.getElementById("modalPlan").style.display =
-            "flex";
-        }
-
-        function cerrarModal(){
-
-            document.getElementById("modalPlan").style.display =
-            "none";
-        }
-        function cerrarError(){
-
-            document.getElementById("modalError").style.display =
-            "none";
-        }
-
-        //cambiar//
-        function confirmarCambio(){
-
-            let hayConexion = Math.random() > 0.5;
-
-            if(!hayConexion){
-
-                cerrarModal();
-
-                document.getElementById("modalError").style.display =
-                "flex";
-
-            return;
-        }
-
-        let nombrePlan =
-        document.getElementById("nombrePlan");
-
-        let beneficios =
-        document.getElementById("beneficiosPlan");
-
-        if(planPendiente === "Basico"){
-
-            nombrePlan.innerHTML = "Plan Básico";
-
-            beneficios.innerHTML = `
-                <li>✓ Monitoreo básico</li>
-                <li>✓ Alertas climáticas</li>
-                <li>✓ Soporte por correo</li>
-            `;
-        }
-
-        else if(planPendiente === "Pro"){
-
-            nombrePlan.innerHTML = "Plan Pro";
-
-            beneficios.innerHTML = `
-                <li>✓ Monitoreo avanzado</li>
-                <li>✓ Reportes y análisis</li>
-                <li>✓ Alertas de plagas y clima</li>
-                <li>✓ Soporte prioritario</li>
-            `;
-        }
-
-        else if(planPendiente === "Premium"){
-
-            nombrePlan.innerHTML = "Plan Premium";
-
-            beneficios.innerHTML = `
-                <li>✓ Todo el plan Pro</li>
-                <li>✓ Gestión financiera avanzada</li>
-                <li>✓ Asesoría avanzada</li>
-                <li>✓ Soporte 24/7</li>
-            `;
-        }
-
-        cerrarModal();
-
-    }
-        
-
-</script>
-    
-    <div id="modalPlan" class="modal">
-
-        <div class="modal-contenido">
-
-            <h2>Confirmar cambio de plan</h2>
-
-            <p id="textoModal">
-                ¿Desea cambiar su suscripción?
-            </p>
-
-            <div class="modal-botones">
-
-                <button class="btn-cancelar"
-                        onclick="cerrarModal()">
-                        Cancelar
-                </button>
-
-                <button class="btn-confirmar"
-                    onclick="confirmarCambio()">
-                    Confirmar
-                </button>
-
-            </div>
-
-        </div>
-
-    </div>
-
-    <div id="modalError" class="modal">
-
-        <div class="modal-contenido">
-
-            <h2>Error de conexión</h2>
-
-            <p>
-                No fue posible actualizar tu plan.
-                Se mantendrá tu suscripción actual.
-            </p>
-
-            <button class="btn-confirmar"
-                    onclick="cerrarError()">
-                Aceptar
-            </button>
-
-        </div>
-
-    </div>
-
-    
 
 </div>
 

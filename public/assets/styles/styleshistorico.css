@@ -1,3 +1,114 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #ffffff;
+    color: #222;
+}
+
+
+/* =========================
+   VARIABLES
+========================= */
+
+:root {
+    --verde: #45603F;
+    --verde-claro: #D9EB96;
+    --blanco: #FFFFFF;
+    --gris: #F4F4F4;
+    --texto: #222222;
+    --sombra: 0 4px 10px rgba(0, 0, 0, 0.12);
+}
+
+
+
+header {
+    background: white;
+    width: 100%;
+}
+
+.navbar {
+    width: 95%;
+    margin: auto;
+    min-height: 75px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+
+
+.user-btn{
+    width:50px;
+    height:50px;
+
+    background:#d8e9a0;
+
+    border-radius:50%;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    transition:.3s;
+}
+
+.user-btn:hover{
+    opacity:.9;
+}
+
+.user-btn img{
+    width:45px;
+    height:45px;
+    object-fit:contain;
+}
+.logo img {
+    width: 180px;
+    display: block;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 55px;
+    list-style: none;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #222;
+    font-size: 18px;
+    font-weight: 500;
+    transition: .3s;
+}
+
+.menu a:hover {
+    color: var(--verde);
+}
+
+.activo {
+    color: var(--verde) !important;
+    text-decoration: underline !important;
+}
+
+.btn-contacto {
+    background: var(--verde);
+    color: white !important;
+    padding: 10px 20px;
+    border-radius: 15px;
+}
+
+.btn-contacto:hover {
+    opacity: .9;
+}
 .historico-page{
 
     width:90%;

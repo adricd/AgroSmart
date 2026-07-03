@@ -36,12 +36,13 @@ header {
 }
 
 .navbar {
-    width: 90%;
+    width: 95%;
     margin: auto;
-    height: 75px;
+    min-height: 75px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 30px;
 }
 /* =========================
    BOTÓN USUARIO
@@ -96,18 +97,15 @@ header {
 }
 
 .activo {
+    background: #d8e9a0;
     color: var(--verde) !important;
+    padding: 10px 20px;
+    border-radius: 15px;
     text-decoration: underline !important;
 }
 
-.btn-contacto {
-    background: var(--verde);
-    color: white !important;
-    padding: 10px 20px;
-    border-radius: 15px;
-}
 
-.btn-contacto:hover {
+.activo:hover {
     opacity: .9;
 }
 

@@ -8,7 +8,15 @@
 
     padding:70px 0;
 }
-
+.navbar {
+    width: 95%;
+    margin: auto;
+    min-height: 75px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
 .plan-actual-card{
 
     width:600px;

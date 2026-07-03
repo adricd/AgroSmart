@@ -1,7 +1,15 @@
 body{
     background:#f5f6f8;
 }
-
+.navbar {
+    width: 95%;
+    margin: auto;
+    min-height: 75px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
 .reportes-page{
     width:90%;
     margin:auto;
