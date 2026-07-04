@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgroSmart - Mi Cuenta</title>
+
+    <link rel="stylesheet" href="assets/styles/styles.css">
+    <link rel="stylesheet" href="assets/styles/stylescuenta.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+          rel="stylesheet">
+</head>
+
+<body>
+
+<header>
+    <nav class="navbar">
+        <div class="logo">
+            <a href="../index.html">
+                <img src="assets/images/logo.png" alt="AgroSmart">
+            </a>
+        </div>
+
+        <ul class="menu">
+            <li><a href="dashboard.html">Inicio</a></li>
+            <li><a href="finanzas.html">Finanzas</a></li>
+            <li><a href="sensores.html">Sensores</a></li>
+            <li><a href="historico.html">Análisis</a></li>
+            <li><a href="reportes.html">Reportes</a></li>
+            <li><a href="inventario.html">Inventario</a></li>
+            <li><a href="registrocultivos.html">Cultivos</a></li>
+
+            <li>
+                <a href="asistencia.html" class="btn-contacto">
+                    Asistencia Técnica
+                </a>
+            </li>
+
+            <li>
+                <a href="cuenta.html" class="user-btn">
+                    <img src="assets/images/user.png" alt="Usuario">
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+<section class="cuenta-section">
+
+    <h3 class="subtitulo-verde">MI CUENTA</h3>
+
+    <h1 class="titulo-principal">
+        Información de usuario
+    </h1>
+
+    <div class="cuenta-container">
+
+        <div class="perfil-card">
+
+            <img src="assets/images/user.png" alt="Usuario" class="perfil-img">
+
+            <h2 id="nombreVista">Martha Lopez</h2>
+
+            <p id="correoVista">martha.lopez@agrosmart.com</p>
+
+            <span class="plan-cuenta">
+                Plan Pro
+            </span>
+            <a href="planes.html" class="btn-ver-plan">
+    Administrar plan
+</a>
+
+        </div>
+
+        <div class="datos-card">
+
+            <h2>Datos de cuenta</h2>
+
+            <div class="datos-grid">
+
+                <div class="dato-item">
+                    <span>Nombre completo</span>
+                    <p id="datoNombre">Martha Lopez</p>
+                </div>
+
+                <div class="dato-item">
+                    <span>Correo electrónico</span>
+                    <p id="datoCorreo">martha.lopez@agrosmart.com</p>
+                </div>
+
+                <div class="dato-item">
+                    <span>Teléfono</span>
+                    <p id="datoTelefono">+51 999 888 777</p>
+                </div>
+
+                <div class="dato-item">
+                    <span>Ubicación</span>
+                    <p id="datoUbicacion">Lima, Perú</p>
+                </div>
+
+                <div class="dato-item">
+                    <span>Tipo de usuario</span>
+                    <p>Gestor agrícola</p>
+                </div>
+
+                <div class="dato-item">
+                    <span>Estado</span>
+                    <p class="estado-activo">Cuenta activa</p>
+                </div>
+
+            </div>
+
+            <button class="btn-editar" id="btnEditar">
+                Modificar datos
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+<div class="modal-cuenta" id="modalCuenta">
+
+    <div class="modal-card">
+
+        <h2>Modificar datos de cuenta</h2>
+
+        <label>Nombre completo</label>
+        <input type="text" id="inputNombre" value="Martha Lopez">
+
+        <label>Correo electrónico</label>
+        <input type="email" id="inputCorreo" value="martha.lopez@agrosmart.com">
+
+        <label>Teléfono</label>
+        <input type="text" id="inputTelefono" value="+51 999 888 777">
+
+        <label>Ubicación</label>
+        <input type="text" id="inputUbicacion" value="Lima, Perú">
+
+        <div class="modal-botones">
+
+            <button class="btn-cancelar" id="btnCancelar">
+                Cancelar
+            </button>
+
+            <button class="btn-confirmar" id="btnGuardar">
+                Guardar cambios
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+<div class="notificacion-cuenta" id="notificacionCuenta">
+    Datos actualizados correctamente.
+</div>
+
+<footer id="contacto">
+
+    <div class="footer-col">
+        <img src="assets/images/logo.png" class="footer-logo" alt="AgroSmart logo">
+
+        <p>
+            Tecnología y crecimiento al servicio del campo.
+            Cultivando un futuro más inteligente.
+        </p>
+
+        <img src="assets/images/redes.png" class="footer-redes" alt="Redes sociales">
+    </div>
+
+    <div class="footer-col">
+        <h3>Navegación</h3>
+        <a href="servicios.html">Servicios</a>
+        <a href="planes.html">Planes</a>
+        <a href="quienesSomos.html">Quienes Somos</a>
+    </div>
+
+    <div class="footer-col">
+        <h3>Contacto</h3>
+        <p>info@agrosmart.com</p>
+        <p>+51 999 999 999</p>
+        <p>Lima, Perú</p>
+    </div>
+
+</footer>
+
+<div class="copyright">
+    ©2026 AgroSmart. Todos los derechos reservados.
+</div>
+
+<script src="assets/scripts/scriptscuenta.js"></script>
+
+</body>
+</html>

@@ -10,18 +10,73 @@ html {
 }
 
 body {
-    background: #ffffff;
+    background:#f8faf8;
     color: #222;
 }
 
-.navbar {
-    width: 95%;
-    margin: auto;
-    min-height: 75px;
+
+header{
+    width: 100%;
+    background: white;
+    overflow: hidden;
+}
+
+.navbar{
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 clamp(8px, 1.5vw, 25px);
+    min-height: clamp(55px, 5vw, 75px);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 30px;
+    gap: clamp(6px, 1vw, 30px);
+}
+
+.logo{
+    flex-shrink: 1;
+}
+
+.logo img{
+    width: clamp(80px, 10vw, 180px);
+}
+
+.menu{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: clamp(6px, 1.4vw, 55px);
+    list-style: none;
+    flex: 1;
+    min-width: 0;
+}
+
+.menu li{
+    flex-shrink: 1;
+}
+
+.menu a{
+    font-size: clamp(10px, 1.15vw, 18px);
+    white-space: nowrap;
+}
+
+.activo{
+    padding: clamp(5px, .7vw, 10px) clamp(8px, 1vw, 20px);
+}
+
+.btn-contacto{
+    padding: clamp(6px, .8vw, 10px) clamp(8px, 1vw, 20px);
+    border-radius: clamp(8px, 1vw, 15px);
+}
+
+.user-btn{
+    width: clamp(32px, 3.5vw, 50px);
+    height: clamp(32px, 3.5vw, 50px);
+    flex-shrink: 0;
+}
+
+.user-btn img{
+    width: clamp(28px, 3vw, 45px);
+    height: clamp(28px, 3vw, 45px);
 }
 
 /* =========================
@@ -250,11 +305,52 @@ body {
 @media (max-width: 1100px){
 
     .navbar{
-        width: 95%;
-        min-height: auto;
-        padding: 15px 0;
-        flex-direction: column;
-        gap: 15px;
+        width: 100%;
+        min-height: 65px;
+        padding: 0 12px;
+        gap: 10px;
+    }
+
+    .logo img{
+        width: 130px;
+    }
+
+    .menu{
+        flex: 1;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .menu li{
+        flex-shrink: 1;
+    }
+
+    .menu a{
+        font-size: 14px;
+        white-space: nowrap;
+    }
+
+    .activo{
+        padding: 7px 12px;
+    }
+
+    .btn-contacto{
+        padding: 8px 12px;
+        font-size: 13px;
+        border-radius: 12px;
+    }
+
+    .user-btn{
+        width: 40px;
+        height: 40px;
+        flex-shrink: 0;
+    }
+
+    .user-btn img{
+        width: 34px;
+        height: 34px;
     }
 
     .inventario-page{

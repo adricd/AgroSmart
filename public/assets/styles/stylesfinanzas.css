@@ -11,8 +11,9 @@
 body{
     font-family:'Poppins',sans-serif;
     background:#f8faf8;
-    color:#333;
+    color: #222;
 }
+
 /* =========================
    VARIABLES
 ========================= */
@@ -26,61 +27,182 @@ body{
     --sombra: 0 4px 10px rgba(0, 0, 0, 0.12);
 }
 
-
-
-header {
-    background: white;
-    width: 100%;
+header{
+    width:100%;
+    background:white;
+    overflow:visible;
+    position:relative;
+    z-index:2000;
 }
 
-.navbar {
-    width: 95%;
-    margin: auto;
-    min-height: 75px;
+.navbar{
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 clamp(8px, 1.5vw, 25px);
+    min-height: clamp(55px, 5vw, 75px);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 30px;
+    gap: clamp(6px, 1vw, 30px);
 }
 
-.logo img {
-    width: 180px;
-    display: block;
+.logo{
+    flex-shrink: 1;
 }
 
-.menu {
+.logo img{
+    width: clamp(80px, 10vw, 180px);
+}
+
+.menu{
     display: flex;
     align-items: center;
-    gap: 55px;
+    justify-content: space-between;
+    gap: clamp(6px, 1.4vw, 55px);
     list-style: none;
+    flex: 1;
+    min-width: 0;
 }
 
-.menu a {
-    text-decoration: none;
-    color: #222;
-    font-size: 18px;
-    font-weight: 500;
-    transition: .3s;
+.menu li{
+    flex-shrink: 1;
 }
 
-.menu a:hover {
-    color: var(--verde);
+.menu a{
+    font-size: clamp(10px, 1.15vw, 18px);
+    white-space: nowrap;
 }
 
-.activo {
-    color: var(--verde) !important;
-    text-decoration: underline !important;
+.activo{
+    padding: clamp(5px, .7vw, 10px) clamp(8px, 1vw, 20px);
 }
 
-.btn-contacto {
-    background: var(--verde);
-    color: white !important;
-    padding: 10px 20px;
-    border-radius: 15px;
+.btn-contacto{
+    padding: clamp(6px, .8vw, 10px) clamp(8px, 1vw, 20px);
+    border-radius: clamp(8px, 1vw, 15px);
 }
 
-.btn-contacto:hover {
-    opacity: .9;
+.user-btn{
+    width: clamp(32px, 3.5vw, 50px);
+    height: clamp(32px, 3.5vw, 50px);
+    flex-shrink: 0;
+}
+
+.user-btn img{
+    width: clamp(28px, 3vw, 45px);
+    background:#d8e9a0;
+    width:50px;
+    height:50px;
+    border-radius:70%;
+    height: clamp(28px, 3vw, 45px);
+}
+.perfil-menu{
+    position:relative;
+}
+
+.perfil-menu .user-btn{
+    width:45px;
+    height:45px;
+    border:none;
+    background:transparent;
+    cursor:pointer;
+}
+
+
+
+.dropdown-perfil{
+    position:absolute;
+    top:50px;
+    right:0;
+    width:170px;
+    background:white;
+    border-radius:15px;
+    box-shadow:0 8px 25px rgba(0,0,0,.18);
+    padding:8px;
+    display:none;
+    z-index:9999;
+}
+
+.perfil-menu:hover .dropdown-perfil{
+    display:block;
+}
+
+.dropdown-perfil a,
+.dropdown-perfil button{
+    width:100%;
+    display:block;
+    border:none;
+    background:white;
+    padding:11px 12px;
+    text-align:left;
+    text-decoration:none;
+    color:#222;
+    font-size:14px;
+    border-radius:10px;
+    cursor:pointer;
+}
+
+.dropdown-perfil a:hover,
+.dropdown-perfil button:hover{
+    background:#D9EB96;
+    color:#45603F;
+}
+
+.logout-overlay{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,.35);
+    display:none;
+    justify-content:center;
+    align-items:flex-start;
+    padding-top:100px;
+    z-index:10000;
+}
+
+.logout-box{
+    width:360px;
+    background:white;
+    padding:25px;
+    border-radius:20px;
+    text-align:center;
+    box-shadow:0 10px 30px rgba(0,0,0,.2);
+}
+
+.logout-box h3{
+    color:#45603F;
+    margin-bottom:10px;
+}
+
+.logout-box p{
+    color:#555;
+    margin-bottom:22px;
+}
+
+.logout-buttons{
+    display:flex;
+    justify-content:center;
+    gap:12px;
+}
+
+.logout-buttons button{
+    border:none;
+    padding:10px 24px;
+    border-radius:25px;
+    cursor:pointer;
+    font-weight:600;
+}
+
+.btn-cancelar{
+    background:#e5e5e5;
+    color:#222;
+}
+
+.btn-aceptar{
+    background:#45603F;
+    color:white;
 }
 
 
@@ -478,26 +600,53 @@ footer {
 ==================================== */
 
 @media (max-width:1100px){
-    .navbar {
-        width: 95%;
-        height: auto;
-        padding: 15px 0;
-        flex-direction: column;
-        gap: 15px;
+    .navbar{
+        width: 100%;
+        min-height: 65px;
+        padding: 0 12px;
+        gap: 10px;
     }
 
-    .menu {
-        gap: 20px;
-        flex-wrap: wrap;
-        justify-content: center;
+    .logo img{
+        width: 130px;
     }
 
-    .menu a {
-        font-size: 16px;
+    .menu{
+        flex: 1;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 12px;
     }
 
-    .logo img {
-        width: 150px;
+    .menu li{
+        flex-shrink: 1;
+    }
+
+    .menu a{
+        font-size: 14px;
+        white-space: nowrap;
+    }
+
+    .activo{
+        padding: 7px 12px;
+    }
+
+    .btn-contacto{
+        padding: 8px 12px;
+        font-size: 13px;
+        border-radius: 12px;
+    }
+
+    .user-btn{
+        width: 40px;
+        height: 40px;
+        flex-shrink: 0;
+    }
+
+    .user-btn img{
+        width: 34px;
+        height: 34px;
     }
     
     .form-grid{
