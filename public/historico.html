@@ -17,42 +17,78 @@
 
 <body>
 
-    <header>
+<header>
 
-        <nav class="navbar">
+    <nav class="navbar">
 
-            <div class="logo">
-                    <a href="../index.html">
-                    <img src="assets/images/logo.png" alt="AgroSmart">
+        <div class="logo">
+            <a href="../index.html">
+                <img src="assets/images/logo.png" alt="AgroSmart">
+            </a>
+        </div>
+
+        <ul class="menu">
+
+            <li><a href="dashboard.html">Inicio</a></li>
+            <li><a href="finanzas.html">Finanzas</a></li>
+            <li><a href="sensores.html">Sensores</a></li>
+            <li><a class="activo" href="historico.html">Análisis</a></li>
+            <li><a href="reportes.html">Reportes</a></li>
+            <li><a href="inventario.html">Inventario</a></li>
+            <li><a href="registrocultivos.html">Cultivos</a></li>
+
+            <li>
+                <a href="asistencia.html" class="btn-contacto">
+                    Asistencia&nbsp;Técnica
                 </a>
-            </div>
+            </li>
 
-            <ul class="menu">
+            <li class="perfil-menu">
 
-                <li><a href="dashboard.html">Inicio</a></li>
-                <li><a href="finanzas.html">Finanzas</a></li>
-                <li><a href="sensores.html">Sensores</a></li>
-                <li><a class="activo" href="historico.html">Análisis</a></li>
-                <li><a href="reportes.html">Reportes</a></li>
-                <li><a href="inventario.html">Inventario</a></li>
-                <li><a href="registrocultivos.html">Cultivos</a></li>
-                <li>
-                    <a href="asistencia.html" class="btn-contacto">
-                        Asistencia Técnica
-                    </a>
-                </li>
+                <button class="user-btn" id="btnPerfil">
+                    <img src="assets/images/user.png" alt="Usuario">
+                </button>
 
-                <li>
-                    <a href="login.html" class="user-btn">
-                        <img src="assets/images/user.png" alt="Usuario">
-                    </a>
-                </li>
+                <div class="dropdown-perfil" id="dropdownPerfil">
 
-            </ul>
+                    <a href="cuenta.html">Ver cuenta</a>
 
-        </nav>
+                    <button id="btnCerrarSesion">
+                        Cerrar sesión
+                    </button>
 
-    </header>
+                </div>
+
+            </li>
+
+        </ul>
+
+    </nav>
+
+</header>
+<div class="logout-overlay" id="logoutOverlay">
+
+    <div class="logout-box">
+
+        <h3>Cerrar sesión</h3>
+
+        <p>¿Deseas cerrar sesión?</p>
+
+        <div class="logout-buttons">
+
+            <button class="btn-cancelar" id="btnCancelarLogout">
+                Cancelar
+            </button>
+
+            <button class="btn-aceptar" id="btnAceptarLogout">
+                Aceptar
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
 
 <section class="historico-page">
 
@@ -270,7 +306,32 @@
         }
 
 });
+const btnCerrarSesion = document.getElementById("btnCerrarSesion");
+const logoutOverlay = document.getElementById("logoutOverlay");
+const btnCancelarLogout = document.getElementById("btnCancelarLogout");
+const btnAceptarLogout = document.getElementById("btnAceptarLogout");
 
+if(btnCerrarSesion){
+
+    btnCerrarSesion.onclick = function(){
+
+        logoutOverlay.style.display="flex";
+
+    }
+
+    btnCancelarLogout.onclick=function(){
+
+        logoutOverlay.style.display="none";
+
+    }
+
+    btnAceptarLogout.onclick=function(){
+
+        window.location.href="login.html";
+
+    }
+
+} 
 </script>
 
 </body>

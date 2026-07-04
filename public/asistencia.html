@@ -17,43 +17,78 @@
 
 <body>
 
-    <header>
+<header>
 
-        <nav class="navbar">
+    <nav class="navbar">
 
-            <div class="logo">
-                    <a href="../index.html">
-                    <img src="assets/images/logo.png" alt="AgroSmart">
+        <div class="logo">
+            <a href="../index.html">
+                <img src="assets/images/logo.png" alt="AgroSmart">
+            </a>
+        </div>
+
+        <ul class="menu">
+
+            <li><a href="dashboard.html">Inicio</a></li>
+            <li><a href="finanzas.html">Finanzas</a></li>
+            <li><a href="sensores.html">Sensores</a></li>
+            <li><a href="historico.html">Análisis</a></li>
+            <li><a href="reportes.html">Reportes</a></li>
+            <li><a href="inventario.html">Inventario</a></li>
+            <li><a href="registrocultivos.html">Cultivos</a></li>
+
+            <li>
+                <a href="asistencia.html" class="activo">
+                    Asistencia&nbsp;Técnica
                 </a>
+            </li>
 
-            </div>
+            <li class="perfil-menu">
 
-            <ul class="menu">
+                <button class="user-btn" id="btnPerfil">
+                    <img src="assets/images/user.png" alt="Usuario">
+                </button>
 
-                <li><a href="dashboard.html">Inicio</a></li>
-                <li><a href="finanzas.html">Finanzas</a></li>
-                <li><a href="sensores.html">Sensores</a></li>
-                <li><a href="historico.html">Análisis</a></li>
-                <li><a href="reportes.html">Reportes</a></li>
-                <li><a href="inventario.html">Inventario</a></li>
-                <li><a href="registrocultivos.html">Cultivos</a></li>
+                <div class="dropdown-perfil" id="dropdownPerfil">
 
-                <li>
-                    <a href="asistencia.html" class="activo">
-                        Asistencia Técnica
-                    </a>
-                </li>
-                <li>
-                    <a href="login.html" class="user-btn">
-                        <img src="assets/images/user.png" alt="Usuario">
-                    </a>
-                </li>
+                    <a href="cuenta.html">Ver cuenta</a>
 
-            </ul>
+                    <button id="btnCerrarSesion">
+                        Cerrar sesión
+                    </button>
 
-        </nav>
+                </div>
 
-    </header>
+            </li>
+
+        </ul>
+
+    </nav>
+
+</header>
+<div class="logout-overlay" id="logoutOverlay">
+
+    <div class="logout-box">
+
+        <h3>Cerrar sesión</h3>
+
+        <p>¿Deseas cerrar sesión?</p>
+
+        <div class="logout-buttons">
+
+            <button class="btn-cancelar" id="btnCancelarLogout">
+                Cancelar
+            </button>
+
+            <button class="btn-aceptar" id="btnAceptarLogout">
+                Aceptar
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
 
         <!-- AQUÍ SIGUE TODO EL CÓDIGO DE ASISTENCIA QUE YA TIENES -->
         <section class="asistencia-page">
