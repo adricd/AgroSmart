@@ -618,3 +618,55 @@ header{
     color:white;
 
 }
+
+/* =========================
+   US33
+========================= */
+
+.historial-fotos{
+
+    width:90%;
+    margin:50px auto;
+
+}
+
+.historial-fotos h2{
+
+    color:#466942;
+    margin-bottom:20px;
+
+}
+
+.galeria-fotos{
+
+    display:flex;
+    gap:20px;
+    flex-wrap:wrap;
+
+    background:white;
+
+    padding:20px;
+
+    border-radius:15px;
+
+    box-shadow:0 4px 15px rgba(0,0,0,.08);
+
+}
+
+.galeria-fotos img{
+
+    width:180px;
+    height:130px;
+
+    object-fit:cover;
+
+    border-radius:12px;
+
+}
+
+.error-galeria{
+
+    color:#dc3545;
+    font-weight:bold;
+
+}
