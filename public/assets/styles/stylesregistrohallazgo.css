@@ -1,0 +1,429 @@
+/* ESTILOS BASE Y FUENTE */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #ffffff;
+    color: #222222;
+}
+
+/* NAVBAR Y HEADER */
+header {
+    background: white;
+    width: 100%;
+}
+
+.navbar {
+    width: 95%;
+    margin: auto;
+    min-height: 75px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+
+.logo img {
+    width: 180px;
+    display: block;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 55px;
+    list-style: none;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #222222;
+    font-size: 18px;
+    font-weight: 500;
+    transition: .3s;
+}
+
+.menu a:hover {
+    color: #45603F;
+}
+
+.btn-contacto {
+    background: #45603F;
+    color: white !important;
+    padding: 10px 20px;
+    border-radius: 15px;
+}
+
+.btn-contacto:hover {
+    opacity: .9;
+}
+
+.user-btn {
+    width: 50px;
+    height: 50px;
+    background: #d8e9a0;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .3s;
+}
+
+.user-btn img {
+    width: 45px;
+    height: 45px;
+    object-fit: contain;
+}
+
+/* REGISTRO DE HALLAZGOS FITOSANITARIOS */
+.main-container-hallazgo {
+    display: flex;
+    width: 100%;
+    min-height: calc(100vh - 75px - 265px);
+    background-color: #F8F9F6;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 0;
+}
+
+.hallazgo-layout-grid {
+    display: flex;
+    width: 90%;
+    max-width: 1140px;
+    margin: auto;
+    justify-content: space-between;
+    align-items: center;
+    gap: 60px;
+}
+
+/* COLUMNA IZQUIERDA */
+.hallazgo-info-visual {
+    flex: 1;
+    max-width: 540px;
+    text-align: left;
+}
+
+.hallazgo-tag-top {
+    display: inline-block;
+    background-color: #D9EB96;
+    color: #45603F;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 6px 14px;
+    border-radius: 30px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.hallazgo-info-visual h2 {
+    font-size: 42px;
+    color: #45603F;
+    line-height: 1.15;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.hallazgo-info-visual p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #555555;
+    margin-bottom: 30px;
+}
+
+.panel-hallazgo-placeholder {
+    width: 100%;
+    background-color: #FFFFFF;
+    border: 1px solid #E2E6DD;
+    border-radius: 18px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    margin-bottom: 20px;
+}
+
+.hallazgo-history-item {
+    padding: 14px 18px;
+    border-radius: 12px;
+    background-color: #FDFDFD;
+    border: 1px solid #EFF2EE;
+}
+
+.hallazgo-history-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.badge-parcela {
+    background-color: #EBF4FB;
+    color: #2D6A9F;
+    font-size: 11.5px;
+    font-weight: 600;
+    padding: 4px 10px;
+    border-radius: 6px;
+}
+
+.date-text {
+    font-size: 12px;
+    color: #999999;
+}
+
+.hallazgo-history-item h4 {
+    font-size: 15px;
+    color: #45603F;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.hallazgo-history-item p {
+    font-size: 13px;
+    color: #666666;
+    line-height: 1.4;
+    margin-bottom: 0;
+}
+
+.alerta-espacio-error {
+    width: 100%;
+    background-color: #FDF2F2;
+    border: 1px solid #F5C6CB;
+    border-radius: 14px;
+    padding: 16px;
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.alerta-error-text h4 {
+    font-size: 14px;
+    color: #721C24;
+    font-weight: 600;
+    margin-bottom: 3px;
+}
+
+.alerta-error-text p {
+    font-size: 12.5px;
+    color: #721C24;
+    line-height: 1.4;
+    margin-bottom: 0;
+}
+
+/* COLUMNA DERECHA */
+.hallazgo-card-wrapper {
+    width: 460px;
+    flex-shrink: 0;
+}
+
+.hallazgo-card-content {
+    background: #FFFFFF;
+    border-radius: 24px;
+    padding: 35px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+    border: 1px solid rgba(69, 96, 63, 0.15);
+}
+
+.hallazgo-card-content h2 {
+    font-size: 26px;
+    color: #45603F;
+    font-weight: 700;
+    margin-bottom: 6px;
+}
+
+.hallazgo-card-content .hallazgo-card-desc {
+    font-size: 13.5px;
+    color: #666666;
+    line-height: 1.4;
+    margin-bottom: 24px;
+}
+
+.form-group-hallazgo {
+    margin-bottom: 20px;
+}
+
+.form-row-custom {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.form-col-custom {
+    flex: 1;
+}
+
+.hallazgo-card-content label {
+    display: block;
+    font-size: 12.5px;
+    font-weight: 600;
+    color: #222222;
+    margin-bottom: 6px;
+}
+
+.hallazgo-card-content input[type="text"],
+.hallazgo-card-content select,
+.hallazgo-card-content textarea {
+    width: 100%;
+    padding: 12px 14px;
+    border-radius: 12px;
+    border: 1px solid #CDD5CB;
+    font-size: 14px;
+    color: #222222;
+    background-color: #F8F9F8;
+    resize: none;
+}
+
+.hallazgo-card-content input:focus,
+.hallazgo-card-content select:focus,
+.hallazgo-card-content textarea:focus {
+    outline: none;
+    border-color: #45603F;
+    box-shadow: 0 0 0 3px rgba(69, 96, 63, 0.12);
+    background-color: #FFFFFF;
+}
+
+.hallazgo-card-content textarea:required:invalid:focus-within,
+.hallazgo-card-content input:required:invalid:focus-within {
+    border-color: #E67E22;
+    box-shadow: 0 0 0 3px rgba(230, 126, 34, 0.15);
+}
+
+.btn-submit-form-hallazgo {
+    width: 100%;
+    background: #45603F;
+    color: #FFFFFF;
+    border: none;
+    padding: 14px;
+    border-radius: 20px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(69, 96, 63, 0.2);
+    margin-top: 5px;
+}
+
+.btn-submit-form-hallazgo:hover {
+    background-color: #354A31;
+}
+
+/* FOOTER Y COPYRIGHT */
+footer {
+    background: #45603F;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    padding: 50px;
+}
+
+.footer-col {
+    width: 300px;
+}
+
+.footer-logo {
+    width: 220px;
+    margin-bottom: 20px;
+    border-radius: 12px;
+}
+
+.footer-redes {
+    width: 140px;      
+    max-width: 100%;   
+    height: auto;
+    margin-top: 15px;
+    display: block;
+}
+
+.footer-col h3 {
+    margin-bottom: 20px;
+}
+
+.footer-col a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    margin-bottom: 12px;
+}
+
+.footer-col p {
+    margin-bottom: 10px;
+}
+
+.copyright {
+    background: #45603F;
+    color: white;
+    text-align: center;
+    padding-bottom: 15px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1100px) {
+    .navbar {
+        width: 95%;
+        height: auto;
+        padding: 15px 0;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .menu {
+        gap: 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .menu a {
+        font-size: 16px;
+    }
+
+    footer {
+        flex-direction: column;
+        text-align: center;
+        gap: 25px;
+    }
+
+    .footer-col {
+        width: 100%;
+    }
+
+    .footer-redes {
+        margin: 15px auto 0;
+        display: block;
+    }
+
+    .main-container-hallazgo {
+        padding: 40px 0;
+    }
+
+    .hallazgo-layout-grid {
+        flex-direction: column;
+        gap: 40px;
+        text-align: center;
+    }
+
+    .hallazgo-info-visual {
+        max-width: 100%;
+    }
+
+    .hallazgo-info-visual h2 {
+        font-size: 32px;
+        text-align: center;
+    }
+
+    .hallazgo-info-visual p {
+        text-align: center;
+    }
+
+    .panel-hallazgo-placeholder,
+    .alerta-espacio-error {
+        text-align: left;
+    }
+
+    .hallazgo-card-wrapper {
+        width: 100%;
+        max-width: 460px;
+    }
+}

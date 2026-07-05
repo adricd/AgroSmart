@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AgroSmart - Registro Fotográfico del Cultivo</title>
+
+    <link rel="stylesheet" href="assets/styles/stylesregistrofotografico.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <header>
+        <nav class="navbar">
+
+            <div class="logo">
+                <a href="../index.html">
+                    <img src="assets/images/logo.png" alt="AgroSmart">
+                </a>
+            </div>
+
+            <ul class="menu">
+                <li><a href="servicios.html">Servicios</a></li>
+                <li><a href="planesindex.html">Planes</a></li>
+                <li><a href="quienesSomos.html">Quienes Somos</a></li>
+                <li><a href="#contacto" class="btn-contacto">Contáctanos</a></li>
+
+                <li>
+                    <a href="login.html" class="user-btn">
+                        <img src="assets/images/user.png" alt="Usuario">
+                    </a>
+                </li>
+            </ul>
+
+        </nav>
+    </header>
+
+    <!-- CUERPO PRINCIPAL -->
+    <main class="main-container-foto">
+        <div class="foto-layout-grid">
+            
+            <!-- Bloque Izquierdo: Historial Visual e Información de Contexto -->
+            <div class="foto-info-visual">
+                <div class="foto-tag-top">Seguimiento Visual</div>
+                <h2>Lleva un registro visual de tu producción</h2>
+                <p>Captura el avance cronológico y el desarrollo foliar de tus plantas. El almacenamiento de imágenes te permite comparar el ritmo de crecimiento y documentar anomalías físicas para el análisis técnico.</p>
+                
+                <!-- Historial del cultivo (Escenario 1) -->
+                <div class="panel-galeria-placeholder">
+                    <h4>Historial del Cultivo (Lote Norte 01)</h4>
+                    <div class="galeria-grid-simulada">
+                        <div class="foto-thumbnail-item">
+                            <div class="thumbnail-mock-img">📸</div>
+                            <span>Fase Inicial (Semana 2)</span>
+                        </div>
+                        <div class="foto-thumbnail-item">
+                            <div class="thumbnail-mock-img">🌿</div>
+                            <span>Crecimiento (Semana 5)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bloque Derecho: Tarjeta de Captura y Carga de Archivos -->
+            <div class="foto-card-wrapper">
+                <div class="foto-card-content">
+                    <h2>Registrar Evidencia</h2>
+                    <p class="foto-card-desc">Selecciona una parcela, toma una fotografía instantánea con la cámara o adjunta un archivo desde tu galería local.</p>
+
+                    <form id="formRegistroFotografico">
+                        
+                        <!-- Vincular a Cultivo/Parcela -->
+                        <div class="form-group-foto">
+                            <label for="cmbCultivoFoto">Vincular a Cultivo Activo *</label>
+                            <select id="cmbCultivoFoto" required>
+                                <option value="">Selecciona</option>
+                                <option value="cultivo1">Arándano Biloxi - Lote 01</option>
+                                <option value="cultivo2">Uva Red Globe - Lote 02</option>
+                            </select>
+                        </div>
+
+                        <!-- Panel de Acciones Multimedia (Capturar y Adjuntar) -->
+                        <div class="multimedia-actions-box">
+                            <label class="label-seccion-multimedia">Origen de la Imagen *</label>
+                            
+                            <!-- Botón para Captura Directa con Cámara -->
+                            <button type="button" class="btn-multimedia btn-camera-trigger">
+                                <span class="multimedia-icon">📷</span>
+                                <div class="multimedia-text">
+                                    <h4>Tomar Fotografía</h4>
+                                    <p>Usar cámara del dispositivo</p>
+                                </div>
+                            </button>
+
+                            <!-- Botón para Adjuntar Archivos Locales -->
+                            <label for="fileAdjuntarImagen" class="btn-multimedia label-file-trigger">
+                                <span class="multimedia-icon">📁</span>
+                                <div class="multimedia-text">
+                                    <h4>Adjuntar Archivo</h4>
+                                    <p>Subir desde la galería local</p>
+                                </div>
+                                <input type="file" id="fileAdjuntarImagen" accept="image/*" style="display: none;">
+                            </label>
+                        </div>
+
+                        <!-- Breve Nota de Observación -->
+                        <div class="form-group-foto">
+                            <label for="txtNotaFoto">Nota o Comentario (Opcional)</label>
+                            <input type="text" id="txtNotaFoto" placeholder="Ej. Detalle del brote superior o coloración">
+                        </div>
+
+                        <!-- Botón Enviar Principal -->
+                        <button type="submit" class="btn-submit-form-foto">Guardar Registro en Historial</button>
+
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer id="contacto">
+
+        <div class="footer-col">
+            <img src="assets/images/logo.png" class="footer-logo" alt="AgroSmart">
+            <p>
+                Tecnología y crecimiento al servicio del campo.<br>
+                Cultivando un futuro más inteligente.
+            </p>
+            <img src="assets/images/redes.png" class="footer-redes" alt="Redes sociales">
+        </div>
+
+        <div class="footer-col">
+            <h3>Navegación</h3>
+            <a href="servicios.html">Servicios</a>
+            <a href="planes.html">Planes</a>
+            <a href="quienesSomos.html">Quienes Somos</a>
+        </div>
+
+        <div class="footer-col">
+            <h3>Contacto</h3>
+            <p>info@agrosmart.com</p>
+            <p>+51 999 999 999</p>
+            <p>Lima, Perú</p>
+        </div>
+
+    </footer>
+
+    <div class="copyright">
+        © 2026 AgroSmart. Todos los derechos reservados.
+    </div>
+
+</body>
+</html>

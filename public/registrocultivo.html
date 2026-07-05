@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AgroSmart - Registro Manual de Cultivos</title>
+
+    <link rel="stylesheet" href="assets/styles/stylesregistrocultivo.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <header>
+        <nav class="navbar">
+
+            <div class="logo">
+                <a href="../index.html">
+                    <img src="assets/images/logo.png" alt="AgroSmart">
+                </a>
+            </div>
+
+            <ul class="menu">
+                <li><a href="servicios.html">Servicios</a></li>
+                <li><a href="planesindex.html">Planes</a></li>
+                <li><a href="quienesSomos.html">Quienes Somos</a></li>
+                <li><a href="#contacto" class="btn-contacto">Contáctanos</a></li>
+
+                <li>
+                    <a href="login.html" class="user-btn">
+                        <img src="assets/images/user.png" alt="Usuario">
+                    </a>
+                </li>
+            </ul>
+
+        </nav>
+    </header>
+
+    <!-- CUERPO PRINCIPAL -->
+    <main class="main-container-cultivo">
+        <div class="cultivo-layout-grid">
+            
+            <!-- Bloque Izquierdo: Información de Contexto -->
+            <div class="cultivo-info-visual">
+                <div class="cultivo-tag-top">Gestión Operativa</div>
+                <h2>Controla las variedades de tu producción</h2>
+                <p>Registra manualmente las variedades y los ciclos de siembra de tus frutas y hortalizas para programar las alertas automáticas de cosecha, fertirriego y mantenimiento preventivo.</p>
+                
+                <!-- Panel de simulación de estados de éxito -->
+                <div class="panel-cultivo-placeholder">
+                    <div class="cultivo-status-item">
+                        <div class="status-text">
+                            <h4>Arándano Biloxi</h4>
+                            <p>Fase: Crecimiento Vegetativo</p>
+                        </div>
+                    </div>
+                    <div class="cultivo-status-item">
+                        <div class="status-text">
+                            <h4>Uva Red Globe</h4>
+                            <p>Fase: Maduración Controlada</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bloque Derecho: Tarjeta del Formulario -->
+            <div class="cultivo-card-wrapper">
+                <div class="cultivo-card-content">
+                    <h2>Registrar Cultivo</h2>
+                    <p class="cultivo-card-desc">Ingresa los datos generales de la siembra para iniciar el seguimiento del ciclo fenológico.</p>
+
+                    <form id="formNuevoCultivo">
+                        
+                        <!-- Nombre o variedad del cultivo -->
+                        <div class="form-group-cultivo">
+                            <label for="txtNombreCultivo">Variedad o Nombre del Cultivo *</label>
+                            <input type="text" id="txtNombreCultivo" placeholder="Ej. Arándano Biloxi" required>
+                        </div>
+
+                        <!-- Fila de datos combinados -->
+                        <div class="form-row-custom">
+                            <!-- Tipo genérico de fruto -->
+                            <div class="form-col-custom">
+                                <label for="cmbTipoFruto">Tipo de Fruto *</label>
+                                <select id="cmbTipoFruto" required>
+                                    <option value="">Selecciona</option>
+                                    <option value="bayas">Bayas</option>
+                                    <option value="vides">Vides</option>
+                                    <option value="citricos">Cítricos</option>
+                                </select>
+                            </div>
+
+                            <!-- Parcela asociada -->
+                            <div class="form-col-custom">
+                                <label for="cmbParcelaRelacionada">Vincular a Parcela *</label>
+                                <select id="cmbParcelaRelacionada" required>
+                                    <option value="">Selecciona</option>
+                                    <option value="lote1">Lote Norte 01</option>
+                                    <option value="lote2">Lote Sur 02</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <!-- Fecha de siembra / plantación -->
+                        <div class="form-group-cultivo">
+                            <label for="dateSiembra">Fecha de Inicio de Siembra *</label>
+                            <input type="date" id="dateSiembra" required>
+                        </div>
+
+                        <!-- Botón Enviar Principal -->
+                        <button type="submit" class="btn-submit-form-cultivo">Guardar Cultivo</button>
+
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer id="contacto">
+
+        <div class="footer-col">
+            <img src="assets/images/logo.png" class="footer-logo" alt="AgroSmart">
+            <p>
+                Tecnología y crecimiento al servicio del campo.<br>
+                Cultivando un futuro más inteligente.
+            </p>
+            <img src="assets/images/redes.png" class="footer-redes" alt="Redes sociales">
+        </div>
+
+        <div class="footer-col">
+            <h3>Navegación</h3>
+            <a href="servicios.html">Servicios</a>
+            <a href="planes.html">Planes</a>
+            <a href="quienesSomos.html">Quienes Somos</a>
+        </div>
+
+        <div class="footer-col">
+            <h3>Contacto</h3>
+            <p>info@agrosmart.com</p>
+            <p>+51 999 999 999</p>
+            <p>Lima, Perú</p>
+        </div>
+
+    </footer>
+
+    <div class="copyright">
+        © 2026 AgroSmart. Todos los derechos reservados.
+    </div>
+
+</body>
+</html>
