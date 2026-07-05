@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AgroSmart - Registro de Parcelas</title>
+
+    <!-- ENLACE ESTÁNDAR A TU HOJA DE ESTILOS SEPARADA -->
+    <link rel="stylesheet" href="assets/styles/stylesregistroparcela.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- =========================
+         NAVBAR (CONSERVADA INTEGRALMENTE)
+    ========================= -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="../index.html">
+                    <img src="assets/images/logo.png" alt="AgroSmart">
+                </a>
+            </div>
+            <ul class="menu">
+                <li><a href="servicios.html">Servicios</a></li>
+                <li><a href="planesindex.html">Planes</a></li>
+                <li><a href="quienesSomos.html">Quienes Somos</a></li>
+                <li><a href="#contacto" class="btn-contacto">Contáctanos</a></li>
+                <li>
+                    <a href="login.html" class="user-btn">
+                        <img src="assets/images/user.png" alt="Usuario">
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- =========================
+         CONTENEDOR CENTRAL DE LA HISTORIA US07
+    ========================= -->
+    <main class="main-container-parcela">
+        <div class="parcela-layout-grid">
+            
+            <!-- Bloque Izquierdo: Información de Contexto Técnico -->
+            <div class="parcela-info-visual">
+                <div class="parcela-tag-top">Módulo Técnico</div>
+                <h2>Optimiza la gestión de tus campos</h2>
+                <p>El registro estructurado de parcelas permite fragmentar el monitoreo fitosanitario y la telemetría hídrica de tus sensores IoT, vinculando cada lote a analíticas predictivas personalizadas.</p>
+                
+                <div class="mapa-placeholder-vectorial">
+                    <div class="parcela-item-mini design-azul"><span>Lote 01 (Arándanos)</span></div>
+                    <div class="parcela-item-mini design-morado"><span>Lote 02 (Uva)</span></div>
+                </div>
+            </div>
+
+            <!-- Bloque Derecho: Tarjeta UI del Formulario -->
+            <div class="parcela-card-wrapper">
+                <div class="parcela-card-content">
+                    <h2>Registrar Parcela</h2>
+                    <p class="parcela-card-desc">Ingresa las características de tu terreno para habilitar el seguimiento individual.</p>
+
+                    <form id="formNuevaParcela">
+                        
+                        <div class="form-group-custom">
+                            <label for="txtNombreParcela">Nombre de la Parcela *</label>
+                            <input type="text" id="txtNombreParcela" placeholder="Ej. Lote Norte 01" required>
+                        </div>
+
+                        <div class="form-row-custom">
+                            <div class="form-col-custom">
+                                <label for="cmbTipoCultivo">Tipo de Cultivo *</label>
+                                <select id="cmbTipoCultivo" required>
+                                    <option value="">Selecciona</option>
+                                    <option value="arandanos">Arándanos</option>
+                                    <option value="uva">Uva</option>
+                                    <option value="palta">Palta</option>
+                                </select>
+                            </div>
+
+                            <div class="form-col-custom">
+                                <label for="numHectareas">Extensión (Hectáreas) *</label>
+                                <input type="number" id="numHectareas" placeholder="Ej. 15.5" min="0.1" step="0.1" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group-custom">
+                            <label>Color de Etiqueta Visual (Gestión de Mixtos)</label>
+                            <div class="etiqueta-color-picker">
+                                <label class="color-dot-container dot-blue">
+                                    <input type="radio" name="color_etiqueta" value="azul" checked>
+                                    <span class="color-checkmark"></span>
+                                </label>
+                                <label class="color-dot-container dot-purple">
+                                    <input type="radio" name="color_etiqueta" value="morado">
+                                    <span class="color-checkmark"></span>
+                                </label>
+                                <label class="color-dot-container dot-green">
+                                    <input type="radio" name="color_etiqueta" value="verde">
+                                    <span class="color-checkmark"></span>
+                                </label>
+                                <label class="color-dot-container dot-orange">
+                                    <input type="radio" name="color_etiqueta" value="naranja">
+                                    <span class="color-checkmark"></span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="form-group-custom">
+                            <button type="button" class="btn-action-map">
+                                🌐 Dibujar área sobre mapa satelital (Autocalcular)
+                            </button>
+                        </div>
+
+                        <button type="submit" class="btn-submit-form-parcela">Guardar Parcela</button>
+
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- =========================
+         FOOTER
+    ========================= -->
+    <footer id="contacto">
+        <div class="footer-col">
+            <img src="assets/images/logo.png" class="footer-logo">
+            <p>
+                Tecnología y crecimiento al servicio del campo.<br>
+                Cultivando un futuro más inteligente.
+            </p>
+            <img src="assets/images/redes.png" class="footer-redes" alt="Redes sociales">
+        </div>
+
+        <div class="footer-col">
+            <h3>Navegación</h3>
+            <a href="servicios.html">Servicios</a>
+            <a href="planes.html">Planes</a>
+            <a href="quienesSomos.html">Quienes Somos</a>
+        </div>
+
+        <div class="footer-col">
+            <h3>Contacto</h3>
+            <p>info@agrosmart.com</p>
+            <p>+51 999 999 999</p>
+            <p>Lima, Perú</p>
+        </div>
+    </footer>
+
+    <div class="copyright">
+        © 2026 AgroSmart. Todos los derechos reservados.
+    </div>
+
+    <script src="assets/scripts/scripts.js"></script>
+
+</body>
+</html>

@@ -100,13 +100,24 @@
 
     <section class="sensores-page">
 
-        <h4 class="subtitulo-verde">
-            MONITOREO IoT
-        </h4>
+        <div class="sensores-header-flex">
+            <div>
+                <h4 class="subtitulo-verde">
+                    MONITOREO IoT
+                </h4>
 
-        <h1 class="titulo-principal">
-            Estado de Batería de Sensores IoT
-        </h1>
+                <h1 class="titulo-principal">
+                    Estado de Batería de Sensores IoT
+                </h1>
+            </div>
+            <div class="sensores-action-top">
+                <a href="vinculacionsensor.html" class="btn-integracion-sensor-main">🔗 Vincular Nuevo Sensor</a>
+            </div>
+
+            <div class="sensores-action-top">
+                <a href="registrosensor.html" class="btn-integracion-sensor-main">🔗 Registrar Nuevo Sensor</a>
+            </div>
+        </div>
 
         <p>
             Monitorea el nivel de carga de los dispositivos instalados
@@ -142,15 +153,18 @@
 
     <section class="filtro-bateria">
 
-        <label>Ordenar por:</label>
-
-        <select>
-
-            <option>Batería Baja</option>
-
-            <option>Batería Alta</option>
-
-        </select>
+        <div class="filtros-sensor-wrapper-flex">
+            <div>
+                <label>Ordenar por:</label>
+                <select>
+                    <option>Batería Baja</option>
+                    <option>Batería Alta</option>
+                </select>
+            </div>
+            <div>
+                <a href="tendenciahumedad.html" class="btn-integracion-sensor-secondary">📊 Ver Tendencias de Humedad</a>
+            </div>
+        </div>
 
     </section>
 
@@ -178,6 +192,10 @@
             <p>
                 Última lectura: Ahora
             </p>
+
+            <div class="mantenimiento-sensor-trigger-box">
+                <a href="programacionmantenimiento.html" class="btn-card-mantenimiento-action">🔧 Programar Revisión</a>
+            </div>
 
         </div>
 

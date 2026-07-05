@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AgroSmart - Vinculación de Sensores</title>
+
+    <!-- Enlace a tu hoja de estilos unificada -->
+    <link rel="stylesheet" href="assets/styles/stylesvinculacionsensor.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar">
+
+            <div class="logo">
+                <a href="../index.html">
+                    <img src="assets/images/logo.png" alt="AgroSmart">
+                </a>
+            </div>
+
+            <ul class="menu">
+                <li><a href="servicios.html">Servicios</a></li>
+                <li><a href="planesindex.html">Planes</a></li>
+                <li><a href="quienesSomos.html">Quiénes Somos</a></li>
+                <li><a href="#contacto" class="btn-contacto">Contáctanos</a></li>
+
+                <li>
+                    <a href="login.html" class="user-btn">
+                        <img src="assets/images/user.png" alt="Usuario">
+                    </a>
+                </li>
+            </ul>
+
+        </nav>
+    </header>
+
+    <!-- =========================
+         CONTENEDOR CENTRAL
+    ========================= -->
+    <main class="main-container-sensor">
+        <div class="sensor-layout-grid">
+            
+            <!-- Bloque Izquierdo: Estado de Conectividad e Indicador de Señal (Escenario 4) -->
+            <div class="sensor-info-visual">
+                <div class="sensor-tag-top">Infraestructura IoT</div>
+                <h2>Conecta tu hardware en tiempo real</h2>
+                <p>Vincula los sensores físicos instalados en tus parcelas para empezar a transmitir métricas críticas de humedad de suelo y temperatura ambiental directamente al dashboard analítico.</p>
+                
+                <!-- Panel que simula el Escenario 4 (Confirmación de señal excelente) -->
+                <div class="panel-senal-placeholder">
+                    <div class="senal-header">
+                        <span class="senal-icon">📡</span>
+                        <div>
+                            <h4>Estado de Transmisión</h4>
+                            <p>Último paquete de datos recibido con éxito</p>
+                        </div>
+                    </div>
+                    <div class="senal-status-badge">
+                        <span class="badge-dot animate-pulse"></span>
+                        Señal Excelente
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bloque Derecho: Tarjeta UI de Vinculación de Hardware -->
+            <div class="sensor-card-wrapper">
+                <div class="sensor-card-content">
+                    <h2>Vincular Dispositivo</h2>
+                    <p class="sensor-card-desc">Escanea el código QR del sensor o ingresa el ID alfanumérico manualmente.</p>
+
+                    <form id="formVincularSensor">
+                        
+                        <!-- Escenario 1: Simulación de caja de escaneo QR -->
+                        <div class="form-group-sensor">
+                            <div class="qr-scanner-mock">
+                                <div class="qr-icon-center">📷</div>
+                                <p>Simulando lectura de código QR...</p>
+                            </div>
+                        </div>
+
+                        <!-- Escenario 3: Ingreso manual de ID -->
+                        <div class="form-group-sensor">
+                            <label for="txtIdSensor">Código Identificador del Sensor (ID) *</label>
+                            <!-- Nota: Si se simula un ID incorrecto, se activa la validación del Escenario 2 -->
+                            <input type="text" id="txtIdSensor" placeholder="Ej. SN-IOT-550X" required>
+                        </div>
+
+                        <div class="form-row-sensor">
+                            <div class="form-col-sensor">
+                                <label for="cmbParcelaAsignada">Asignar a Parcela *</label>
+                                <select id="cmbParcelaAsignada" required>
+                                    <option value="">Selecciona Terreno</option>
+                                    <option value="lote01">Lote Norte 01 (Arándanos)</option>
+                                    <option value="lote02">Lote Sur 02 (Uva)</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <!-- Botón Enviar Principal -->
+                        <button type="submit" class="btn-submit-form-sensor">Vincular Sensor</button>
+
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- =========================
+        FOOTER 
+    ========================= -->
+    <footer id="contacto">
+
+        <div class="footer-col">
+            <img src="assets/images/logo.png" class="footer-logo" alt="AgroSmart">
+            <p>
+                Tecnología y crecimiento al servicio del campo.<br>
+                Cultivando un futuro más inteligente.
+            </p>
+            <img src="assets/images/redes.png" class="footer-redes" alt="Redes sociales">
+        </div>
+
+        <div class="footer-col">
+            <h3>Navegación</h3>
+            <a href="servicios.html">Servicios</a>
+            <a href="planes.html">Planes</a>
+            <a href="quienesSomos.html">Quiénes Somos</a>
+        </div>
+
+        <div class="footer-col">
+            <h3>Contacto</h3>
+            <p>info@agrosmart.com</p>
+            <p>+51 999 999 999</p>
+            <p>Lima, Perú</p>
+        </div>
+
+    </footer>
+
+    <div class="copyright">
+        © 2026 AgroSmart. Todos los derechos reservados.
+    </div>
+
+</body>
+</html>
