@@ -167,22 +167,69 @@
 
             <br><br>
 
-            <button
-                id="btnRegistrar"
-                class="btn-plan-verde">
+ <div id="estadoConexion" class="estado-online">
 
-                Registrar Cultivo
+    🟢 Estado: Conectado
 
-            </button>
+</div>
 
-            <div
-                id="mensajeRegistro"
-                class="mensaje-exito"
-                style="display:none; margin-top:20px;">
+<div class="acciones-us12">
 
-            </div>
+    <button
+        id="btnCambiarConexion"
+        class="btn-bloqueado">
 
-        </div>
+        📶 Simular Sin Conexión
+
+    </button>
+
+    <button
+        id="btnSincronizar"
+        class="btn-plan-blanco">
+
+        🔄 Sincronizar ahora
+
+    </button>
+
+</div>
+
+    <button
+        id="btnRegistrar"
+        class="btn-plan-verde">
+
+        Registrar Cultivo
+
+    </button>
+
+    <div
+        id="mensajeRegistro"
+        class="mensaje-exito"
+        style="display:none; margin-top:20px;">
+
+    </div>
+
+    <div
+        id="mensajeSincronizacion"
+        class="mensaje-exito"
+        style="display:none; margin-top:15px;">
+
+    </div>
+
+    <div
+        id="mensajeRegistro"
+        class="mensaje-exito"
+        style="display:none; margin-top:20px;">
+
+    </div>
+
+    <div
+        id="mensajeSincronizacion"
+        class="mensaje-exito"
+        style="display:none; margin-top:15px;">
+
+    </div>
+
+    
 
     </section>
 
@@ -203,6 +250,7 @@
                     <th>Ubicación</th>
                     <th>Observaciones</th>
                     <th>Foto</th>
+                    <th>Estado</th>
 
                 </tr>
 
