@@ -5,6 +5,8 @@ const previewFoto = document.getElementById("previewFoto");
 const mensaje = document.getElementById("mensajeRegistro");
 const tabla = document.getElementById("tablaCultivos");
 const estadoConexion = document.getElementById("estadoConexion");
+const galeria = document.getElementById("galeriaFotos");
+const mensajeFotos = document.getElementById("mensajeFotos");
 
 /* =========================
    CAMBIAR CONEXIÓN
@@ -64,7 +66,11 @@ fotoCultivo.addEventListener("change", () => {
 
     }
 
+    /* Mostrar vista previa */
     previewFoto.src = URL.createObjectURL(archivo);
+
+    /* Ocultar mensajes anteriores */
+    mensaje.style.display = "none";
 
 });
 
@@ -75,19 +81,23 @@ fotoCultivo.addEventListener("change", () => {
 
 document.getElementById("btnRegistrar").addEventListener("click", () => {
 
-    const cultivo = document.getElementById("nombreCultivo").value;
+        const cultivo = document.getElementById("nombreCultivo").value;
+
     const ubicacion = document.getElementById("ubicacion").value;
+
     const observaciones = document.getElementById("observaciones").value;
+
     const archivo = fotoCultivo.files[0];
 
-    if (
+    if(
         cultivo === "" ||
         ubicacion === "" ||
         observaciones === "" ||
         !archivo
-    ) {
+    ){
 
         mensaje.style.display = "block";
+
         mensaje.className = "mensaje-error";
 
         mensaje.innerHTML = `
@@ -99,17 +109,22 @@ document.getElementById("btnRegistrar").addEventListener("click", () => {
     }
 
     const formatosPermitidos = [
+
         "image/jpeg",
         "image/jpg",
         "image/png"
+
     ];
 
-    if (!formatosPermitidos.includes(archivo.type)) {
+    if(!formatosPermitidos.includes(archivo.type)){
 
         mensaje.style.display = "block";
+
         mensaje.className = "mensaje-error";
 
-        mensaje.innerHTML = "❌ Formato no permitido.";
+        mensaje.innerHTML = `
+            ❌ Formato no permitido.
+        `;
 
         return;
 
@@ -117,25 +132,29 @@ document.getElementById("btnRegistrar").addEventListener("click", () => {
 
     let estado;
 
-    if (conexion) {
+    if(conexion){
 
         estado = "Sincronizado";
 
         mensaje.className = "mensaje-exito";
 
         mensaje.innerHTML = `
-            ✅ Cultivo registrado correctamente.<br>
+            ✅ Cultivo registrado correctamente.
+            <br>
             📷 Evidencia sincronizada con la nube.
         `;
 
-    } else {
+    }
+
+    else{
 
         estado = "Pendiente";
 
         mensaje.className = "mensaje-error";
 
         mensaje.innerHTML = `
-            📡 Sin conexión.<br>
+            📡 Sin conexión.
+            <br>
             El cultivo quedó pendiente de sincronización.
         `;
 
@@ -154,19 +173,49 @@ document.getElementById("btnRegistrar").addEventListener("click", () => {
         <td>
             <img src="${foto}" width="90">
         </td>
-        <td class="${estado === "Pendiente" ? "pendiente" : "sincronizado"}">
+        <td class="${estado==="Pendiente" ? "pendiente" : "sincronizado"}">
             ${estado}
         </td>
     `;
 
     tabla.appendChild(fila);
 
+    /* =========================
+       US33 - FOTOGRAFÍAS PREVIAS
+    ========================= */
+
+    if (galeria) {
+
+        
+        if (mensajeFotos) {
+
+            mensajeFotos.remove();
+
+        }
+
+        const imagen = document.createElement("img");
+
+        imagen.src = foto;
+
+        imagen.style.width = "180px";
+        imagen.style.height = "130px";
+        imagen.style.objectFit = "cover";
+        imagen.style.borderRadius = "12px";
+
+        galeria.appendChild(imagen);
+
+    }   
+
     document.getElementById("nombreCultivo").value = "";
+
     document.getElementById("ubicacion").value = "";
+
     document.getElementById("observaciones").value = "";
+
     fotoCultivo.value = "";
 
-    previewFoto.src = "assets/images/subir-imagen.png";
+    previewFoto.src =
+    "assets/images/subir-imagen.png";
 
 });
 
@@ -181,7 +230,14 @@ document.getElementById("btnSincronizar").onclick = function () {
 
     if (!conexion) {
 
-        alert("❌ No hay conexión para sincronizar.");
+        mensaje.style.display = "block";
+        mensaje.className = "mensaje-error";
+
+        mensaje.innerHTML = `
+            ❌ No hay conexión a Internet.
+            <br>
+            No fue posible sincronizar los registros.
+        `;
 
         return;
 
@@ -200,35 +256,74 @@ document.getElementById("btnSincronizar").onclick = function () {
 
     });
 
-    alert("✅ Todos los registros pendientes fueron sincronizados.");
+    mensaje.style.display = "block";
+    mensaje.className = "mensaje-exito";
+
+    mensaje.innerHTML = `
+        ✅ Todos los registros pendientes fueron sincronizados correctamente.
+    `;
 
 };
+
+
+
+/* =========================
+   US33 - ERROR DE CARGA
+========================= */
+
+const btnError =
+document.getElementById("btnSimularError");
+
+if(btnError){
+
+    btnError.onclick = function(){
+
+        galeria.innerHTML = `
+            <p class="error-galeria">
+                ❌ Error al recuperar las fotografías.
+                <br>
+                Intente nuevamente más tarde.
+            </p>
+        `;
+
+    }
+
+}
+
 
 
 /* =========================
    CERRAR SESIÓN
 ========================= */
 
-const btnCerrarSesion = document.getElementById("btnCerrarSesion");
-const logoutOverlay = document.getElementById("logoutOverlay");
-const btnCancelarLogout = document.getElementById("btnCancelarLogout");
-const btnAceptarLogout = document.getElementById("btnAceptarLogout");
+const btnCerrarSesion =
+document.getElementById("btnCerrarSesion");
 
-if (btnCerrarSesion) {
+const logoutOverlay =
+document.getElementById("logoutOverlay");
 
-    btnCerrarSesion.onclick = function () {
+const btnCancelarLogout =
+document.getElementById("btnCancelarLogout");
+
+const btnAceptarLogout =
+document.getElementById("btnAceptarLogout");
+
+
+if(btnCerrarSesion){
+
+    btnCerrarSesion.onclick = function(){
 
         logoutOverlay.style.display = "flex";
 
     };
 
-    btnCancelarLogout.onclick = function () {
+    btnCancelarLogout.onclick = function(){
 
         logoutOverlay.style.display = "none";
 
     };
 
-    btnAceptarLogout.onclick = function () {
+    btnAceptarLogout.onclick = function(){
 
         window.location.href = "login.html";
 
