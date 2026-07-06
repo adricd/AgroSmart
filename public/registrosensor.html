@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AgroSmart - Registro de Sensores IoT</title>
+
+    <link rel="stylesheet" href="assets/styles/stylesregistrosensor.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- NAVBAR CORREGIDA -->
+    <header>
+        <nav class="navbar">
+
+            <div class="logo">
+                <a href="../index.html">
+                    <img src="assets/images/logo.png" alt="AgroSmart">
+                </a>
+            </div>
+
+            <ul class="menu">
+                <li><a href="servicios.html">Servicios</a></li>
+                <li><a href="planesindex.html">Planes</a></li>
+                <li><a href="quienesSomos.html">Quienes Somos</a></li>
+                <li><a href="#contacto" class="btn-contacto">Contáctanos</a></li>
+
+                <li>
+                    <a href="login.html" class="user-btn">
+                        <img src="assets/images/user.png" alt="Usuario">
+                    </a>
+                </li>
+            </ul>
+
+        </nav>
+    </header>
+
+    <!-- CUERPO PRINCIPAL -->
+    <main class="main-container-sensor">
+        <div class="sensor-layout-grid">
+            
+            <!-- Bloque Izquierdo: Estado de Infraestructura y Alertas Técnicas -->
+            <div class="sensor-info-visual">
+                <div class="sensor-tag-top">Infraestructura IoT</div>
+                <h2>Expande la red de telemetría en tus campos</h2>
+                <p>Añade nuevos nodos de recolección de datos a tu mapa agrícola. Vincular correctamente el hardware te permitirá monitorear variables críticas de suelo y ambiente en tiempo real.</p>
+                
+                <!-- Escenario 3: Mensaje simulado de Validación de sensor duplicado -->
+                <div class="alerta-duplicado-placeholder">
+                    <span class="alerta-icon-warning">⚠️</span>
+                    <div class="alerta-text-content">
+                        <h4>Validación de hardware: ID en uso</h4>
+                        <p>El código de dispositivo ingresado ya se encuentra registrado y asociado a otra parcela. Verifique el número de serie físico antes de reintentar.</p>
+                    </div>
+                </div>
+
+                <!-- Cuadro informativo complementario de la sección -->
+                <section class="consejo-box-sensor">
+                    <p>ℹ️ Una vez registrado, el dispositivo enviará un paquete de prueba para validar la integridad de su señal y firmware antes de iniciar las lecturas oficiales.</p>
+                </section>
+            </div>
+
+            <!-- Bloque Derecho: Tarjeta del Formulario de Registro -->
+            <div class="sensor-card-wrapper">
+                <div class="sensor-card-content">
+                    <h2>Registrar Sensor</h2>
+                    <p class="sensor-card-desc">Asocia un nuevo dispositivo físico a un lote de cultivo específico para indexar las métricas ambientales.</p>
+
+                    <form id="formRegistroSensor">
+                        
+                        <!-- Identificador del Hardware -->
+                        <div class="form-group-sensor">
+                            <label for="txtIdSensor">ID o Código del Sensor *</label>
+                            <input type="text" id="txtIdSensor" placeholder="Ej. AS-TH02-99" required>
+                        </div>
+
+                        <!-- Fila de datos: Tipo y Cultivo Asociado -->
+                        <div class="form-row-custom">
+                            <div class="form-col-custom">
+                                <label for="cmbTipoSensor">Tipo de Variable *</label>
+                                <select id="cmbTipoSensor" required>
+                                    <option value="">Selecciona</option>
+                                    <option value="humedad">Humedad de Suelo</option>
+                                    <option value="temperatura">Temperatura</option>
+                                    <option value="ph">Nivel de pH</option>
+                                </select>
+                            </div>
+
+                            <div class="form-col-custom">
+                                <label for="cmbCultivoAsociado">Asociar a Cultivo *</label>
+                                <select id="cmbCultivoAsociado" required>
+                                    <option value="">Selecciona Lote</option>
+                                    <option value="lote1">Papa - Sector A</option>
+                                    <option value="lote2">Tomate - Sector B</option>
+                                    <option value="lote3">Maíz - Sector C</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <!-- Modelo de fabricación -->
+                        <div class="form-group-sensor">
+                            <label for="txtModeloSensor">Modelo del Hardware *</label>
+                            <input type="text" id="txtModeloSensor" placeholder="Ej. AgroSmart Node v2" required>
+                        </div>
+
+                        <!-- Botón de Acción Principal (Escenario 1) -->
+                        <button type="submit" class="btn-submit-form-sensor">Registrar Sensor</button>
+
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer id="contacto">
+        <div class="footer-col">
+            <img src="assets/images/logo.png" class="footer-logo" alt="AgroSmart">
+            <p>Tecnología y crecimiento al servicio del campo.<br>Cultivando un futuro más inteligente.</p>
+        </div>
+
+        <div class="footer-col">
+            <h3>Navegación</h3>
+            <a href="servicios.html">Servicios</a>
+            <a href="planes.html">Planes</a>
+            <a href="quienesSomos.html">Quienes Somos</a>
+        </div>
+
+        <div class="footer-col">
+            <h3>Contacto</h3>
+            <p>info@agrosmart.com</p>
+            <p>+51 999 999 999</p>
+            <p>Lima, Perú</p>
+        </div>
+    </footer>
+
+    <div class="copyright">
+        © 2026 AgroSmart. Todos los derechos reservados.
+    </div>
+
+</body>
+</html>

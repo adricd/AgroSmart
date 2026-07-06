@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AgroSmart - Tendencias de Humedad del Suelo</title>
+
+    <link rel="stylesheet" href="assets/styles/stylestendenciahumedad.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <header>
+        <nav class="navbar">
+
+            <div class="logo">
+                <a href="../index.html">
+                    <img src="assets/images/logo.png" alt="AgroSmart">
+                </a>
+            </div>
+
+            <ul class="menu">
+                <li><a href="servicios.html">Servicios</a></li>
+                <li><a href="planesindex.html">Planes</a></li>
+                <li><a href="quienesSomos.html">Quienes Somos</a></li>
+                <li><a href="#contacto" class="btn-contacto">Contáctanos</a></li>
+
+                <li>
+                    <a href="login.html" class="user-btn">
+                        <img src="assets/images/user.png" alt="Usuario">
+                    </a>
+                </li>
+            </ul>
+
+        </nav>
+    </header>
+
+    <!-- CUERPO PRINCIPAL -->
+    <main class="main-container-humedad">
+        <div class="humedad-layout-grid">
+            
+            <!-- Bloque Izquierdo: Controles de Filtrado y Métricas -->
+            <div class="humedad-info-visual">
+                <div class="humedad-tag-top">Telemetría Hídrica</div>
+                <h2>Analiza el comportamiento hídrico semanal</h2>
+                <p>Monitorea las subidas y bajadas de humedad según los riegos aplicados. Identifica de manera visual las anomalías en lecturas de hardware o pérdidas de señal de red en campo.</p>
+                
+                <div class="panel-filtros-placeholder">
+                    <div class="filter-group-custom">
+                        <label for="cmbParcelaFiltro">Seleccionar Parcela *</label>
+                        <select id="cmbParcelaFiltro">
+                            <option value="lote1">Lote Norte 01 (Arándanos)</option>
+                            <option value="lote2">Lote Sur 02 (Uva)</option>
+                        </select>
+                    </div>
+
+                    <div class="filter-checkbox-group">
+                        <label class="toggle-container">
+                            <input type="checkbox" id="chkSuperposicion" checked>
+                            <span class="toggle-slider"></span>
+                            Filtro: Humedad + Temperatura Activado
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bloque Derecho: Panel con Captura del Gráfico -->
+            <div class="humedad-card-wrapper">
+                <div class="humedad-card-content">
+                    <div class="chart-header-meta">
+                        <h3>Tendencia Semanal</h3>
+                        <span class="badge-periodo">Últimos 7 días</span>
+                    </div>
+
+                    <!-- Contenedor optimizado para la imagen de la gráfica -->
+                    <div class="chart-image-container">
+                        <img src="assets/images/graficahumedad.png" alt="Tendencias de Humedad y Temperatura" class="chart-screenshot">
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer id="contacto">
+
+        <div class="footer-col">
+            <img src="assets/images/logo.png" class="footer-logo" alt="AgroSmart">
+            <p>
+                Tecnología y crecimiento al servicio del campo.<br>
+                Cultivando un futuro más inteligente.
+            </p>
+            <img src="assets/images/redes.png" class="footer-redes" alt="Redes sociales">
+        </div>
+
+        <div class="footer-col">
+            <h3>Navegación</h3>
+            <a href="servicios.html">Servicios</a>
+            <a href="planes.html">Planes</a>
+            <a href="quienesSomos.html">Quienes Somos</a>
+        </div>
+
+        <div class="footer-col">
+            <h3>Contacto</h3>
+            <p>info@agrosmart.com</p>
+            <p>+51 999 999 999</p>
+            <p>Lima, Perú</p>
+        </div>
+
+    </footer>
+
+    <div class="copyright">
+        © 2026 AgroSmart. Todos los derechos reservados.
+    </div>
+
+</body>
+</html>

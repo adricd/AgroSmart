@@ -410,10 +410,45 @@ header{
     border-radius:10px;
 }
 
+.integracion-flujo-multimedia-fotos {
+    margin: 25px auto;
+    width: 100%;
+    max-width: 300px;
+    display: flex;
+    justify-content: center;
+}
+
+.btn-integracion-cultivos-action {
+    background-color: #45603F;
+    color: #FFFFFF !important;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 12px 24px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(69, 96, 63, 0.15);
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-integracion-cultivos-action:hover {
+    background-color: #354A31;
+    transform: translateY(-1px);
+}
+
 
 /* =========================
    RESPONSIVE
 ========================= */
+
+@media (max-width: 1100px) {
+    .integracion-flujo-multimedia-fotos {
+        max-width: 100%;
+        padding: 0 15px;
+    }
+}
 
 @media (max-width: 1100px){
 
@@ -616,5 +651,57 @@ header{
     background:#45603F;
 
     color:white;
+
+}
+
+/* =========================
+   US33
+========================= */
+
+.historial-fotos{
+
+    width:90%;
+    margin:50px auto;
+
+}
+
+.historial-fotos h2{
+
+    color:#466942;
+    margin-bottom:20px;
+
+}
+
+.galeria-fotos{
+
+    display:flex;
+    gap:20px;
+    flex-wrap:wrap;
+
+    background:white;
+
+    padding:20px;
+
+    border-radius:15px;
+
+    box-shadow:0 4px 15px rgba(0,0,0,.08);
+
+}
+
+.galeria-fotos img{
+
+    width:180px;
+    height:130px;
+
+    object-fit:cover;
+
+    border-radius:12px;
+
+}
+
+.error-galeria{
+
+    color:#dc3545;
+    font-weight:bold;
 
 }

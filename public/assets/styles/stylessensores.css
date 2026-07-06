@@ -458,9 +458,105 @@ header{
     font-weight:500;
 }
 
+.sensores-header-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.sensores-header-flex .sensores-action-top {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.filtros-sensor-wrapper-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.mantenimiento-sensor-trigger-box {
+    margin-top: 15px;
+    width: 100%;
+}
+
+.btn-integracion-sensor-main {
+    background-color: #45603F;
+    color: #FFFFFF !important;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 12px 24px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(69, 96, 63, 0.15);
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+.btn-integracion-sensor-main:hover {
+    background-color: #2F3E2C;
+}
+
+.btn-integracion-sensor-secondary {
+    background-color: #FFFFFF;
+    color: #45603F !important;
+    border: 1px solid #45603F;
+    text-decoration: none;
+    font-size: 13.5px;
+    font-weight: 600;
+    padding: 10px 20px;
+    border-radius: 10px;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+.btn-integracion-sensor-secondary:hover {
+    background-color: #FAFBF9;
+}
+
+.btn-card-mantenimiento-action {
+    background-color: #dc3545;
+    color: #FFFFFF !important;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 8px 14px;
+    border-radius: 8px;
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 3px 8px rgba(220, 53, 69, 0.15);
+    transition: background-color 0.3s ease;
+}
+
+.btn-card-mantenimiento-action:hover {
+    background-color: #bd2130;
+}
+
 /* =========================
    RESPONSIVE
 ========================= */
+
+@media(max-width: 768px) {
+    .sensores-header-flex,
+    .filtros-sensor-wrapper-flex {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .btn-integracion-sensor-main,
+    .btn-integracion-sensor-secondary {
+        width: 100%;
+        text-align: center;
+    }
+}
 
 @media(max-width:1200px){
 
@@ -485,6 +581,7 @@ header{
     }
 
 }
+
 /* =========================
    RESPONSIVE 1100px
 ========================= */

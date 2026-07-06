@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AgroSmart - Registro de Hallazgos Fitosanitarios</title>
+
+    <link rel="stylesheet" href="assets/styles/stylesregistrohallazgo.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <header>
+        <nav class="navbar">
+
+            <div class="logo">
+                <a href="../index.html">
+                    <img src="assets/images/logo.png" alt="AgroSmart">
+                </a>
+            </div>
+
+            <ul class="menu">
+                <li><a href="servicios.html">Servicios</a></li>
+                <li><a href="planesindex.html">Planes</a></li>
+                <li><a href="quienesSomos.html">Quienes Somos</a></li>
+                <li><a href="#contacto" class="btn-contacto">Contáctanos</a></li>
+
+                <li>
+                    <a href="login.html" class="user-btn">
+                        <img src="assets/images/user.png" alt="Usuario">
+                    </a>
+                </li>
+            </ul>
+
+        </nav>
+    </header>
+
+    <!-- CUERPO PRINCIPAL -->
+    <main class="main-container-hallazgo">
+        <div class="hallazgo-layout-grid">
+            
+            <!-- Bloque Izquierdo: Información de Contexto -->
+            <div class="hallazgo-info-visual">
+                <div class="hallazgo-tag-top">Supervisión Sanitaria</div>
+                <h2>Complementa los diagnósticos de la IA</h2>
+                <p>Registra anotaciones manuales sobre anomalías fitosanitarias no cuantificables por los sensores automáticos (como presencia de larvas específicas o coloraciones inusuales) para enriquecer el historial clínico agrícola.</p>
+                
+                <!-- Historial de hallazgos simulado -->
+                <div class="panel-hallazgo-placeholder">
+                    <div class="hallazgo-history-item">
+                        <div class="hallazgo-history-meta">
+                            <span class="badge-parcela">Lote Norte 01</span>
+                            <span class="date-text">Hoy</span>
+                        </div>
+                        <h4>Posible inicio de Mildiu</h4>
+                        <p>Manchas blanquecinas detectadas en el envés de las hojas inferiores cerca al canal de riego.</p>
+                    </div>
+                </div>
+
+                <!-- Escenario 3: Alerta simulada de almacenamiento local lleno (dispositivos móviles) -->
+                <div class="alerta-espacio-error">
+                    <div class="alerta-error-text">
+                        <h4>Error: Almacenamiento local lleno</h4>
+                        <p>No se pudo guardar la copia local. Por favor, elimina archivos temporales o caché de tu dispositivo antes de reintentar.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bloque Derecho: Tarjeta del Formulario -->
+            <div class="hallazgo-card-wrapper">
+                <div class="hallazgo-card-content">
+                    <h2>Registrar Hallazgo</h2>
+                    <p class="hallazgo-card-desc">Completa la evaluación técnica de campo para indexarla a la bitácora fitosanitaria.</p>
+
+                    <form id="formNuevoHallazgo">
+                        
+                        <div class="form-row-custom">
+                            <!-- Parcela afectada -->
+                            <div class="form-col-custom">
+                                <label for="cmbParcelaHallazgo">Parcela Observada *</label>
+                                <select id="cmbParcelaHallazgo" required>
+                                    <option value="">Selecciona</option>
+                                    <option value="lote1">Lote Norte 01</option>
+                                    <option value="lote2">Lote Sur 02</option>
+                                </select>
+                            </div>
+
+                            <!-- Gravedad estimada -->
+                            <div class="form-col-custom">
+                                <label for="cmbGravedad">Nivel de Riesgo *</label>
+                                <select id="cmbGravedad" required>
+                                    <option value="">Selecciona</option>
+                                    <option value="bajo">Bajo (Monitoreo)</option>
+                                    <option value="medio">Moderado</option>
+                                    <option value="alto">Alto (Intervención)</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <!-- Título de la anomalía -->
+                        <div class="form-group-hallazgo">
+                            <label for="txtTituloAnomalia">Asunto / Anomalía Detectada *</label>
+                            <input type="text" id="txtTituloAnomalia" placeholder="Ej. Descoloración foliar o plaga" required>
+                        </div>
+
+                        <!-- Escenario 2: Cuadro de descripción obligatoria con enfoque naranja de alerta -->
+                        <div class="form-group-hallazgo">
+                            <label for="txtDescripcionHallazgo">Descripción detallada del hallazgo *</label>
+                            <textarea id="txtDescripcionHallazgo" rows="4" placeholder="Describe los síntomas visuales, cantidad de plantas afectadas o patrones encontrados..." required></textarea>
+                        </div>
+
+                        <!-- Botón Enviar Principal -->
+                        <button type="submit" class="btn-submit-form-hallazgo">Guardar Hallazgo</button>
+
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer id="contacto">
+
+        <div class="footer-col">
+            <img src="assets/images/logo.png" class="footer-logo" alt="AgroSmart">
+            <p>
+                Tecnología y crecimiento al servicio del campo.<br>
+                Cultivando un futuro más inteligente.
+            </p>
+            <img src="assets/images/redes.png" class="footer-redes" alt="Redes sociales">
+        </div>
+
+        <div class="footer-col">
+            <h3>Navegación</h3>
+            <a href="servicios.html">Servicios</a>
+            <a href="planes.html">Planes</a>
+            <a href="quienesSomos.html">Quienes Somos</a>
+        </div>
+
+        <div class="footer-col">
+            <h3>Contacto</h3>
+            <p>info@agrosmart.com</p>
+            <p>+51 999 999 999</p>
+            <p>Lima, Perú</p>
+        </div>
+
+    </footer>
+
+    <div class="copyright">
+        © 2026 AgroSmart. Todos los derechos reservados.
+    </div>
+
+</body>
+</html>

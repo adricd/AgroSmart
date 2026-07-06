@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AgroSmart - Programación de Mantenimiento Técnico</title>
+
+    <link rel="stylesheet" href="assets/styles/stylesprogramacionmantenimiento.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar">
+
+            <div class="logo">
+                <a href="../index.html">
+                    <img src="assets/images/logo.png" alt="AgroSmart">
+                </a>
+            </div>
+
+            <ul class="menu">
+                <li><a href="servicios.html">Servicios</a></li>
+                <li><a href="planesindex.html">Planes</a></li>
+                <li><a href="quienesSomos.html">Quienes Somos</a></li>
+                <li><a href="#contacto" class="btn-contacto">Contáctanos</a></li>
+
+                <li>
+                    <a href="login.html" class="user-btn">
+                        <img src="assets/images/user.png" alt="Usuario">
+                    </a>
+                </li>
+            </ul>
+
+        </nav>
+    </header>
+
+    <main class="main-container-mantenimiento">
+        <div class="mantenimiento-layout-grid">
+            
+            <div class="mantenimiento-info-visual">
+                <div class="mantenimiento-tag-top">Gestión de Soporte IoT</div>
+                <h2>Garantiza la continuidad de tus datos</h2>
+                <p>Planifica y calendariza las revisiones técnicas de tu infraestructura de hardware para evitar interrupciones críticas en las métricas de telemetría de tus parcelas.</p>
+                
+                <div class="alerta-critica-placeholder">
+                    <div class="alerta-text-content">
+                        <h4>Atención: Sensor SN-IOT-550X crítico</h4>
+                        <p>El hardware reporta fallas de hardware graves hoy. Se sugiere adelantar la revisión técnica inmediatamente en lugar de programarla a largo plazo.</p>
+                    </div>
+                </div>
+
+                <div class="panel-contingencia-clima">
+                    <div class="clima-meta">
+                        <div>
+                            <h4>Pronóstico de lluvias intensas detectado</h4>
+                            <p>Citas programadas en riesgo de postergación en campo.</p>
+                        </div>
+                    </div>
+                    <button type="button" class="btn-action-clima">⛈️ Posponer citas del día a fecha disponible</button>
+                </div>
+            </div>
+
+            <div class="mantenimiento-card-wrapper">
+                <div class="mantenimiento-card-content">
+                    <h2>Programar Revisión</h2>
+                    <p class="mantenimiento-card-desc">Registra las asignaciones técnicas y configura las alertas automáticas de prevención.</p>
+
+                    <form id="formMantenimiento">
+                        
+                        <div class="form-group-mantenimiento">
+                            <label for="cmbGrupoSensores">Seleccionar Dispositivo / Grupo *</label>
+                            <select id="cmbGrupoSensores" required>
+                                <option value="">Selecciona Hardware</option>
+                                <option value="sn550">SN-IOT-550X (Lote Norte 01)</option>
+                                <option value="sn320">SN-IOT-320Y (Lote Sur 02)</option>
+                            </select>
+                        </div>
+
+                        <div class="form-row-custom">
+                            <div class="form-col-custom">
+                                <label for="dateMantenimiento">Fecha de Revisión *</label>
+                                <input type="date" id="dateMantenimiento" required>
+                            </div>
+
+                            <div class="form-col-custom">
+                                <label for="cmbTecnico">Técnico Asignado *</label>
+                                <select id="cmbTecnico" required>
+                                    <option value="">Selecciona</option>
+                                    <option value="tec1">Ing. Carlos Mendoza</option>
+                                    <option value="tec2">Tec. Luis Fuentes</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group-mantenimiento">
+                            <label for="cmbRecordatorio">Enviar Recordatorio Automático al Técnico</label>
+                            <select id="cmbRecordatorio">
+                                <option value="0">El mismo día</option>
+                                <option value="1">1 día antes</option>
+                                <option value="3" selected>3 días antes (Recomendado)</option>
+                                <option value="7">1 semana antes</option>
+                            </select>
+                        </div>
+
+                        <button type="submit" class="btn-submit-form-mantenimiento">Guardar Programación</button>
+
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer id="contacto">
+
+        <div class="footer-col">
+            <img src="assets/images/logo.png" class="footer-logo" alt="AgroSmart">
+            <p>
+                Tecnología y crecimiento al servicio del campo.<br>
+                Cultivando un futuro más inteligente.
+            </p>
+            <img src="assets/images/redes.png" class="footer-redes" alt="Redes sociales">
+        </div>
+
+        <div class="footer-col">
+            <h3>Navegación</h3>
+            <a href="servicios.html">Servicios</a>
+            <a href="planes.html">Planes</a>
+            <a href="quienesSomos.html">Quienes Somos</a>
+        </div>
+
+        <div class="footer-col">
+            <h3>Contacto</h3>
+            <p>info@agrosmart.com</p>
+            <p>+51 999 999 999</p>
+            <p>Lima, Perú</p>
+        </div>
+
+    </footer>
+
+    <div class="copyright">
+        © 2026 AgroSmart. Todos los derechos reservados.
+    </div>
+
+</body>
+</html>
