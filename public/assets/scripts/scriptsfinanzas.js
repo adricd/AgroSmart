@@ -2,17 +2,39 @@ const btnCalcular = document.getElementById("btnCalcular");
 
 btnCalcular.addEventListener("click", () => {
 
-    const semillas =
-        Number(document.getElementById("semillas").value) || 0;
+    const inputSemillas = document.getElementById("semillas");
+    const inputFertilizantes = document.getElementById("fertilizantes");
+    const inputManoObra = document.getElementById("manoObra");
+    const inputIngresos = document.getElementById("ingresos");
 
-    const fertilizantes =
-        Number(document.getElementById("fertilizantes").value) || 0;
+    // Validar campos vacíos
+    if (
+        inputSemillas.value.trim() === "" ||
+        inputFertilizantes.value.trim() === "" ||
+        inputManoObra.value.trim() === "" ||
+        inputIngresos.value.trim() === ""
+    ) {
 
-    const manoObra =
-        Number(document.getElementById("manoObra").value) || 0;
+        alert("Debe completar todos los campos para calcular el ROI.");
+        return;
+    }
 
-    const ingresos =
-        Number(document.getElementById("ingresos").value) || 0;
+    const semillas = Number(inputSemillas.value);
+    const fertilizantes = Number(inputFertilizantes.value);
+    const manoObra = Number(inputManoObra.value);
+    const ingresos = Number(inputIngresos.value);
+
+    // Validar que los valores sean mayores que 0
+    if (
+        semillas <= 0 ||
+        fertilizantes <= 0 ||
+        manoObra <= 0 ||
+        ingresos <= 0
+    ) {
+
+        alert("Todos los valores deben ser mayores que 0.");
+        return;
+    }
 
     const costosTotales =
         semillas + fertilizantes + manoObra;
@@ -64,29 +86,30 @@ btnCalcular.addEventListener("click", () => {
     }
 
 });
+
 const btnCerrarSesion = document.getElementById("btnCerrarSesion");
 const logoutOverlay = document.getElementById("logoutOverlay");
 const btnCancelarLogout = document.getElementById("btnCancelarLogout");
 const btnAceptarLogout = document.getElementById("btnAceptarLogout");
 
-if(btnCerrarSesion){
+if (btnCerrarSesion) {
 
-    btnCerrarSesion.onclick = function(){
+    btnCerrarSesion.onclick = function () {
 
-        logoutOverlay.style.display="flex";
-
-    }
-
-    btnCancelarLogout.onclick=function(){
-
-        logoutOverlay.style.display="none";
+        logoutOverlay.style.display = "flex";
 
     }
 
-    btnAceptarLogout.onclick=function(){
+    btnCancelarLogout.onclick = function () {
 
-        window.location.href="login.html";
+        logoutOverlay.style.display = "none";
 
     }
 
-} 
+    btnAceptarLogout.onclick = function () {
+
+        window.location.href = "login.html";
+
+    }
+
+}
